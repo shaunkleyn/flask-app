@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Index Page</title>
+   </head>
+   <body>
+      <h3>Values</h3>
+      <a href="/value/add">ADD</a>
+      <br>
+      <table>
+         <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Icon</th>
+            <th>Description</th>
+            <th></th>
+         </thead>
+         {% for data in values %}
+         <tbody>
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.description}}</td>
+            <td>{{data.icon_id}}</td>
+            <td><a href="/delete/{{data.id}}" type="button">Delete</a></td>
+         </tbody>
+         {% endfor%}
+      </table>
+   </body>
+</html>
